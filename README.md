@@ -17,4 +17,4 @@ washington.csv
 Contact Udacity to access csv files. 
 
 ### Credits
-Stack Exchange is soooooo helpful! 
+Stack Exchange is soooooo helpful! Udacity's classroom has lots of great info and I'm learning a ton, but the instructions are not quite complete, and I wouldn't have been able to complete the project without stack exchange. 
