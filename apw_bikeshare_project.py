@@ -8,7 +8,6 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv' }
 months = ['all','january','february','march','april','may','june']
 weekdays = ['all','monday','tuesday','wednesday','thursday','friday','saturday','sunday']
-#pretend like I refactored something with the weekdays variable 
 
 def get_filters():
     """
@@ -19,7 +18,7 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('\nHello! Let\'s explore some US bikeshare data!\n')
    
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input('Which city would you like to analyze? Please enter "chicago" "new york city" or "washington"').lower().rstrip()
@@ -93,6 +92,28 @@ def load_data(city, month, months, weekday, weekdays):
 
     return df
 
+def show_raw(df):
+    """Asks user whether or not they wish to inspect raw data."""
+
+    raw = input('Before we go further, would you like to see a few lines of the raw data? Please enter yes or no.').lower().rstrip()
+    #check user input
+    while True:
+        if raw in ['yes','y','no','n']:
+            break
+        else: 
+            raw = input("Sorry, I didn't understand that. Please enter 'yes' or 'no', or you can simply enter y for yes or n for no.").lower().rstrip()
+    #show raw data (or not)
+    while True:
+        if raw not in ['yes','y']:
+            break
+        else:
+            start = 0
+            end = 4
+            while raw in ['yes','y']:
+                print(df.iloc[start:end])
+                start += 5
+                end += 5
+                raw = input('\nTo see 5 more rows, type "yes" or "y" without the quotations;\nTo move on to the analysis, enter anything else')
 
 def time_stats(df,month,weekday):
     """Displays statistics on the most frequent times of travel."""
@@ -193,6 +214,7 @@ def main():
         city, month, weekday = get_filters()
         df = load_data(city, month, months, weekday, weekdays)
 
+        show_raw(df)
         time_stats(df,month,weekday)
         station_stats(df)
         trip_duration_stats(df)
