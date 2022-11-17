@@ -1,17 +1,19 @@
 >**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
 
 ### Date created
-Include the date you created this project and README file.
+Nov 17 2022
 
 ### Project Title
-Replace the Project Title
+APW Bikeshare Project
 
 ### Description
-Describe what your project is about and what it does
+This is my python code for the Udacity Programming for Data Science Nanodgree
 
 ### Files used
-Include the files used
+apw_bikeshare_project.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Stack Exchange is soooooo helpful! 
