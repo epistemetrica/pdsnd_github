@@ -108,12 +108,13 @@ def show_raw(df):
             break
         else:
             start = 0
-            end = 4
+            end = 5
+            #run loop to show 5 successive lines at a time
             while raw in ['yes','y']:
                 print(df.iloc[start:end])
                 start += 5
                 end += 5
-                raw = input('\nTo see 5 more rows, type "yes" or "y" without the quotations;\nTo move on to the analysis, enter anything else')
+                raw = input('\nTo see 5 more rows, type "yes" or "y" without the quotations;\nTo move on to the analysis, enter anything else:\n')
 
 def time_stats(df,month,weekday):
     """Displays statistics on the most frequent times of travel."""
