@@ -14,6 +14,7 @@ apw_bikeshare_project.py
 chicago.csv
 new_york_city.csv
 washington.csv
+Contact Udacity to access csv files. 
 
 ### Credits
 Stack Exchange is soooooo helpful! 
